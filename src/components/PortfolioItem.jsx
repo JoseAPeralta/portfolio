@@ -12,14 +12,7 @@ import {
 
 export const PortfolioItem = ({ name, image, description, code, preview }) => {
   return (
-    <Box
-      as="article"
-      mt="13px"
-      mb="13px"
-      p="14px"
-      border="1px"
-      borderColor="light.300"
-    >
+    <Box as="article" p="14px" border="1px" borderColor="light.300">
       <header>
         <Heading as="h3" pb="14px">
           {name}

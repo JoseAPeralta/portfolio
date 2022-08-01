@@ -1,6 +1,6 @@
 import React from "react";
 import { PortfolioItem } from "./PortfolioItem";
-import { Box, Heading } from "@chakra-ui/react";
+import { SimpleGrid, Box, Heading } from "@chakra-ui/react";
 
 export const Portfolio = () => {
   const name = "App Name is";
@@ -14,7 +14,7 @@ export const Portfolio = () => {
     <Box as="section" pt="60px">
       <Heading align="center">Portfolio</Heading>
 
-      <Box>
+      <SimpleGrid pt="30px" columns={[1, 1, 1, 2, 2, 3]} spacing="6">
         <PortfolioItem
           name={name}
           image={image}
@@ -36,7 +36,7 @@ export const Portfolio = () => {
           preview={preview}
           code={code}
         />
-      </Box>
+      </SimpleGrid>
     </Box>
   );
 };

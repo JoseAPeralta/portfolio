@@ -41,7 +41,13 @@ const theme = {
         solid: {
           bg: "primary.200",
           color: "light.100",
-          _hover: { bg: "primary.100" },
+          _hover: {
+            bg: "primary.100",
+            _disabled: {
+              bg: "primary.200",
+              color: "light.200",
+            },
+          },
           _active: {
             bg: "primary.100",
             boxShadow:
