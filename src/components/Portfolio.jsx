@@ -1,41 +1,26 @@
 import React from "react";
 import { PortfolioItem } from "./PortfolioItem";
 import { SimpleGrid, Box, Heading } from "@chakra-ui/react";
+// import JSONData from "../content/projects.json";
+// import { graphql } from "gatsby";
+// import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export const Portfolio = () => {
-  const name = "App Name is";
-  const image = "profile.jpeg";
-  const description =
-    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.";
-  const preview = "https://github.com/";
-  const code = "https://github.com/";
-
+export const Portfolio = ({ data }) => {
+  data.contentJson.projects.map((project) => {
+    return (project.img = data.allFile.nodes.filter((image) => {
+      const imgName = image.base.toLowerCase();
+      const projectImg = project.banner.toLowerCase();
+      return imgName === projectImg;
+    })[0]);
+  });
   return (
     <Box as="section" pt="60px">
       <Heading align="center">Portfolio</Heading>
 
       <SimpleGrid pt="30px" columns={[1, 1, 1, 2, 2, 3]} spacing="6">
-        <PortfolioItem
-          name={name}
-          image={image}
-          description={description}
-          preview={preview}
-          code={code}
-        />
-        <PortfolioItem
-          name={name}
-          image={image}
-          description={description}
-          preview={preview}
-          code={code}
-        />
-        <PortfolioItem
-          name={name}
-          image={image}
-          description={description}
-          preview={preview}
-          code={code}
-        />
+        {data.contentJson.projects.map((project, index) => (
+          <PortfolioItem key={index} data={project} />
+        ))}
       </SimpleGrid>
     </Box>
   );

@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "my todo list app",
+      "banner": "mytodolist.png",
+      "description": "A todo list app make from typescript and react",
+      "stack": ["reactjs", "typescript"],
+      "preview": "https://my-todo-list-app-gamma.vercel.app/",
+      "code": "https://github.com/JoseAPeralta/my-todo-list-app"
+    },
+    {
+      "name": "Rick and morty",
+      "banner": "rickandmorty.png",
+      "description": "Rick and Morty finder is web app to show characters of the famous tv series Rick and Morty.",
+      "stack": ["reactjs", "javascript"],
+      "preview": "https://rick-and-morty-phi-indol.vercel.app/",
+      "code": "https://github.com/JoseAPeralta/rick-and-morty"
+    },
+    {
+      "name": "Pokedex",
+      "banner": "mytodolist.png",
+      "description": "",
+      "stack": ["javascript"],
+      "preview": "https://rick-and-morty-phi-indol.vercel.app/",
+      "code": "https://github.com/JoseAPeralta/Pokedex"
+    }
+  ]
+}

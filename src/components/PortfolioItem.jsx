@@ -1,5 +1,6 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import {
   Flex,
   Box,
@@ -10,7 +11,9 @@ import {
   ButtonGroup,
 } from "@chakra-ui/react";
 
-export const PortfolioItem = ({ name, image, description, code, preview }) => {
+export const PortfolioItem = ({ data }) => {
+  const { name, description, code, preview, stack } = data;
+  const image = getImage(data.img);
   return (
     <Box as="article" p="14px" border="1px" borderColor="light.300">
       <header>
@@ -19,21 +22,18 @@ export const PortfolioItem = ({ name, image, description, code, preview }) => {
         </Heading>
       </header>
       <figure>
-        <StaticImage
-          src={`../images/profile.jpeg`}
-          alt="Jose Peralta photo"
-          placeholder="blurred"
+        <GatsbyImage
+          image={image}
+          alt={`project banner`}
           style={{
-            height: "142px",
-            maxWidth: "100%",
             objectFit: "cover",
-            verticalAlign: "middle",
+            verticalAlign: "baseline",
           }}
         />
       </figure>
       <Text pt="22px">{description}</Text>
       <Flex as="section" pt="14px" gap="6" wrap="wrap">
-        <Box w="32px" h="32px">
+        {/* <Box w="32px" h="32px">
           <StaticImage src="../images/icons/git.svg" alt="Git icon" />
         </Box>
         <Box w="32px" h="32px">
@@ -49,7 +49,7 @@ export const PortfolioItem = ({ name, image, description, code, preview }) => {
           <StaticImage src="../images/icons/reactjs.svg" alt="reactJS icon" />
         </Box>
 
-        <Box w="110px" h="32px">
+        <Box w="110px">
           <StaticImage src="../images/icons/express.svg" alt="express icon" />
         </Box>
         <Box w="112px" h="32px">
@@ -57,7 +57,7 @@ export const PortfolioItem = ({ name, image, description, code, preview }) => {
         </Box>
         <Box w="32px" h="32px">
           <StaticImage src="../images/icons/gatsby.svg" alt="gatsby icon" />
-        </Box>
+        </Box> */}
       </Flex>
 
       <ButtonGroup as="section" pt="14px" spacing="6">
@@ -67,14 +67,6 @@ export const PortfolioItem = ({ name, image, description, code, preview }) => {
         <Button as={Link} href={code} isExternal variant="outline">
           Code
         </Button>
-        {/* <Button
-          as={Link}
-          href="https://github.com/JoseAPeralta"
-          isExternal
-          variant="outline"
-        >
-          Details
-        </Button> */}
       </ButtonGroup>
     </Box>
   );
