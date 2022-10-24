@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import {
   Flex,
@@ -12,11 +12,10 @@ import {
 } from "@chakra-ui/react";
 
 export const PortfolioItem = ({ data }) => {
-  const { title, code, demo, banner, banner_alt, slug, stack } =
-    data.node.frontmatter;
+  const { title, code, demo, banner_alt, stack } = data.node.frontmatter;
   const body = data.node.body;
+  const banner = getImage(data.node.frontmatter.banner);
 
-  const image = getImage(data.img);
   return (
     <Box as="article" p="14px" border="1px" borderColor="light.300">
       <header>
@@ -26,15 +25,17 @@ export const PortfolioItem = ({ data }) => {
       </header>
       <figure>
         <GatsbyImage
-          image={image}
-          alt={`project banner`}
+          image={banner}
+          alt={banner_alt}
           style={{
             objectFit: "cover",
             verticalAlign: "baseline",
           }}
         />
       </figure>
+
       <Text pt="22px">{body}</Text>
+
       <Flex as="section" pt="14px" gap="6" wrap="wrap">
         {/* <Box w="32px" h="32px">
           <StaticImage src="../images/icons/git.svg" alt="Git icon" />

@@ -32,13 +32,22 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            banner
             banner_alt
             code
             demo
-            slug
             stack
             title
+            banner {
+              childImageSharp {
+                gatsbyImageData(
+                  jpgOptions: { progressive: true }
+                  placeholder: BLURRED
+                  formats: WEBP
+                  aspectRatio: 2
+                  transformOptions: { cropFocus: NORTHWEST }
+                )
+              }
+            }
           }
           body
         }
