@@ -30,9 +30,6 @@ export const Technologies = () => {
         <Box w="112px" h="32px">
           <StaticImage src="../images/icons/mongodb.svg" alt="mongoDB icon" />
         </Box>
-        <Box w="32px" h="32px">
-          <StaticImage src="../images/icons/gatsby.svg" alt="gatsby icon" />
-        </Box>
       </Flex>
 
       <Text align="center" pt="30px" color="dark.100">

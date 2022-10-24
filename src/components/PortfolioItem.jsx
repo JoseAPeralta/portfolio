@@ -12,13 +12,16 @@ import {
 } from "@chakra-ui/react";
 
 export const PortfolioItem = ({ data }) => {
-  const { name, description, code, preview, stack } = data;
+  const { title, code, demo, banner, banner_alt, slug, stack } =
+    data.node.frontmatter;
+  const body = data.node.body;
+
   const image = getImage(data.img);
   return (
     <Box as="article" p="14px" border="1px" borderColor="light.300">
       <header>
         <Heading as="h3" pb="14px">
-          {name}
+          {title}
         </Heading>
       </header>
       <figure>
@@ -31,7 +34,7 @@ export const PortfolioItem = ({ data }) => {
           }}
         />
       </figure>
-      <Text pt="22px">{description}</Text>
+      <Text pt="22px">{body}</Text>
       <Flex as="section" pt="14px" gap="6" wrap="wrap">
         {/* <Box w="32px" h="32px">
           <StaticImage src="../images/icons/git.svg" alt="Git icon" />
@@ -61,8 +64,8 @@ export const PortfolioItem = ({ data }) => {
       </Flex>
 
       <ButtonGroup as="section" pt="14px" spacing="6">
-        <Button as={Link} href={preview} isExternal variant="solid">
-          Preview
+        <Button as={Link} href={demo} isExternal variant="solid">
+          Demo
         </Button>
         <Button as={Link} href={code} isExternal variant="outline">
           Code
