@@ -12,16 +12,14 @@ export const Navbar = () => {
         color="light.200"
         p="4"
         boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+        fontSize="xl"
       >
         <Flex as="ul" gap="6">
           <Flex as="li">
-            <Link href="#">Home</Link>
+            <Link href="#projects">Projects</Link>
           </Flex>
           <Flex as="li">
-            <Link href="#">Projects</Link>
-          </Flex>
-          <Flex as="li">
-            <Link href="#">Contact</Link>
+            <Link href="#contact">Contact</Link>
           </Flex>
         </Flex>
       </Flex>

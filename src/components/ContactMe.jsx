@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { useForm } from "@formspree/react";
 import {
   Flex,
@@ -11,6 +10,7 @@ import {
   Input,
   Textarea,
   Button,
+  Image,
 } from "@chakra-ui/react";
 
 export const ContactMe = () => {
@@ -18,18 +18,17 @@ export const ContactMe = () => {
   const [state, handleSubmit] = useForm(contactFormEndPoint);
   if (state.succeeded) {
     return (
-      <Box>
-        <Text align="center" color="dark.100" fontSize="xl" mt="60px" mb="15px">
+      <Box pt="60px">
+        <Text align="center" color="dark.100" fontSize="xl" mb="15px">
           Thank you for contacting me, I will answer you as soon as I can
         </Text>
         <Box align="center">
-          <StaticImage
-            src="../images/eezy_71.svg"
+          <Image
+            src="./images/afterContactImg.svg"
             alt="Contact me image"
-            placeholder="blurred"
             style={{
               height: "auto",
-              maxWidth: "70%",
+              maxWidth: "50%",
               objectFit: "cover",
               verticalAlign: "middle",
             }}
@@ -39,9 +38,11 @@ export const ContactMe = () => {
     );
   }
   return (
-    <Box as="section" mt="60px">
-      <Heading align="center">Contact me</Heading>
-      <Text align="center">
+    <Box as="section" id="contact" pt="60px">
+      <Heading align="center" fontSize="5xl">
+        Contact me
+      </Heading>
+      <Text align="center" fontSize="lg">
         Please contact me for more information and work opportunities
       </Text>
 
