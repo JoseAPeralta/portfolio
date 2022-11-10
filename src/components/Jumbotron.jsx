@@ -1,11 +1,12 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { AiFillGithub } from "react-icons/ai";
-import { Flex, Box, Heading, Text, Link } from "@chakra-ui/react";
+import { Flex, Box, Heading, Text, Link, Image } from "@chakra-ui/react";
+import JosePeraltaImg from "../images/profile.jpeg?w=1200&h=1600;1400&position=top&webp&quality=80&srcset";
+import Fallback from "../images/profile.jpeg";
 
 export const Jumbotron = () => {
   return (
-    <Flex as="section" minH={["40vh", "60vh", "40vh", "70vh"]}>
+    <Flex as="section" minH={["40vh", "60vh", "40vh", "10vh"]}>
       <Flex
         w={["100%", "100%", "60%"]}
         bg="primary.100"
@@ -15,18 +16,22 @@ export const Jumbotron = () => {
         align="center"
       >
         <Box as="header" align="center" w="100%">
-          <Heading as="h1">Web Developer</Heading>
-          <Text>I focus on developing secure and scalable software</Text>
+          <Heading as="h1" fontSize={["3xl", "5xl", "5xl", "6xl"]}>
+            Web Developer
+          </Heading>
+          <Text fontSize={["md", "2xl"]} pt="4px">
+            I focus on developing secure and scalable software
+          </Text>
         </Box>
 
         <Flex justifyContent="space-around" w="100%">
-          <Text align="center">
+          <Text align="center" fontSize={["sm", "xl"]}>
             working to achieve the <br /> best performance
           </Text>
           <Link
             href="https://github.com/JoseAPeralta"
             isExternal
-            fontSize="3xl"
+            fontSize="5xl"
           >
             <AiFillGithub />
           </Link>
@@ -39,16 +44,10 @@ export const Jumbotron = () => {
         justify="center"
         p={["0", "0", "4"]}
       >
-        <StaticImage
-          src="../images/profile.jpeg"
+        <Image
+          srcset={JosePeraltaImg}
+          fallbackSrc={Fallback}
           alt="Jose Peralta photo"
-          placeholder="blurred"
-          style={{
-            height: "auto",
-            maxWidth: "100%",
-            objectFit: "cover",
-            verticalAlign: "middle",
-          }}
         />
       </Flex>
     </Flex>

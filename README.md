@@ -2,7 +2,7 @@
   Jose Ariel Peralta Portfolio
 </h1>
 
-This is a personal portfolio develop with gatsby and love.
+This is a personal portfolio develop with react and love.
 
 ## Install
 
@@ -10,7 +10,7 @@ This is a personal portfolio develop with gatsby and love.
 
 ## To start dev server
 
-    npm run develop
+    npm run dev
 
 ## Building to production
 

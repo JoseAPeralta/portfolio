@@ -1,0 +1,37 @@
+---
+title: "My Portfolio"
+stack: ["reactjs", "chakraui", "mdx"]
+banner_alt: "portfolio project banner"
+demo: "https://jperalta.dev/"
+code: "https://github.com/JoseAPeralta/portfolio"
+---
+
+import Banner from "./banner.png?w=90;900;1200&h=660&position=top&webp&quality=20&srcset";
+import Fallback from "./banner.png?w=400";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
+
+<picture>
+  <Image
+    srcset={Banner}
+    alt={banner_alt}
+    fallbackSrc={Fallback}
+    type="image/webp"
+  />
+</picture>
+
+My portfolio page to show my personal projects.
+
+Use **MDX** to write projects description and vite as development environment.
+
+And use **formspree** service to facilitate contact form implementation.
+
+<Flex as="section" pt="14px" gap="6" wrap="wrap">
+    <Box w="32px" h="32px">
+    <Image src="../images/icons/reactjs.svg" alt="reactJS icon" />
+    </Box>
+
+    <Box w="32px" h="32px">
+      <Image src="../images/icons/chakraui.svg" alt="chakraui icon" />
+    </Box>
+
+</Flex>
