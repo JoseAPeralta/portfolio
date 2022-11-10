@@ -1,10 +1,44 @@
 ---
-title: "Rick and morty"
-stack: ["reactjs", "typescript"]
-banner: "./rickandmorty.png"
-banner_alt: "Rick and morty"
+title: "Rick and Morty Search"
+stack: ["reactjs", "typescript", "chakraui"]
+banner_alt: "Rick and morty project banner"
 demo: "https://rick-and-morty-phi-indol.vercel.app/"
 code: "https://github.com/JoseAPeralta/rick-and-morty"
 ---
 
-Rick and Morty finder is web app to show characters of the famous tv series Rick and Morty.
+import Banner from "./banner.png?w=90;900;1200&h=660&position=top&webp&quality=20&srcset";
+import Fallback from "./banner.png?w=400";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
+
+<picture>
+  <Image
+    srcset={Banner}
+    alt={banner_alt}
+    fallbackSrc={Fallback}
+    type="image/webp"
+  />
+</picture>
+
+<Box pt="22px"></Box>
+
+Rick and Morty Search is web app to show characters of the famous tv series Rick
+and Morty. You cant find by name, gender and alive or not.
+
+Use **axios** to fetch data from API
+
+Test implementation with **vitest**(testing library, jest) and automate testing accessibility with **jest-axe**.
+
+<Flex as="section" pt="14px" gap="6" wrap="wrap">
+    <Box w="32px" h="32px">
+    <Image src="../images/icons/javascript.svg" alt="Javascript icon" />
+    </Box>
+
+    <Box w="32px" h="32px">
+    <Image src="../images/icons/reactjs.svg" alt="reactJS icon" />
+    </Box>
+
+    <Box w="32px" h="32px">
+    <Image src="../images/icons/chakraui.svg" alt="chakraui icon" />
+    </Box>
+
+</Flex>

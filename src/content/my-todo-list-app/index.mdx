@@ -1,10 +1,42 @@
 ---
 title: "My Todo List App"
-stack: ["reactjs", "typescript"]
-banner: "./mytodolist.png"
-banner_alt: "my todo list app"
+stack: ["reactjs", "bootstrap"]
+banner_alt: "my todo list app project banner"
 demo: "https://my-todo-list-app-gamma.vercel.app/"
 code: "https://github.com/JoseAPeralta/my-todo-list-app"
 ---
 
-A todo list app make from typescript and react
+import Banner from "./banner.png?w=90;900;1200&h=660&position=top&webp&quality=20&srcset";
+import Fallback from "./banner.png?w=400";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
+
+<picture>
+  <Image
+    srcset={Banner}
+    alt={banner_alt}
+    fallbackSrc={Fallback}
+    type="image/webp"
+  />
+</picture>
+
+<Box pt="22px"></Box>
+
+A todo list app in which you could indicate a name, level of urgency, deadline, among other things.
+
+Contains a **custom** component **library** form, to manage its state, facilitate theming and their reuse, which uses
+Bootstrapfor styling
+
+<Flex as="section" pt="14px" gap="6" wrap="wrap" >
+    <Box w="32px" h="32px">
+      <Image src="../images/icons/javascript.svg" alt="Javascript icon" />
+    </Box>
+
+    <Box w="32px" h="32px">
+      <Image src="../images/icons/reactjs.svg" alt="reactJS icon" />
+    </Box>
+
+    <Box w="40px" h="32px">
+      <Image src="../images/icons/bootstrap.svg" alt="bootstrap icon" />
+    </Box>
+
+</Flex>

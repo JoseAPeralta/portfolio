@@ -13,12 +13,13 @@ export const Footer = () => {
       mt="60px"
       color="light.200"
       height="200px"
+      fontSize="xl"
     >
       <Text width="100%" align="center">
         Develop by <strong>Jose Peralta</strong>
       </Text>
       <Box width="100%" align="center" pt="6px">
-        <Link href="https://github.com/JoseAPeralta" isExternal fontSize="3xl">
+        <Link href="https://github.com/JoseAPeralta" isExternal fontSize="5xl">
           <AiFillGithub />
         </Link>
       </Box>

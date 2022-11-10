@@ -4,37 +4,37 @@
   "private": true,
   "description": "portfolio",
   "author": "Jose A Peralta",
+  "type": "module",
   "keywords": [
-    "gatsby"
+    "react",
+    "vitejs"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@chakra-ui/gatsby-plugin": "^3.0.1",
     "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@formspree/react": "^2.3.0",
-    "@mdx-js/react": "^2.1.4",
     "framer-motion": "^6.5.1",
-    "gatsby": "^4.21.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "^2.19.0",
-    "gatsby-plugin-manifest": "^4.19.0",
-    "gatsby-plugin-mdx": "^4.3.0",
-    "gatsby-plugin-react-helmet": "^5.19.0",
-    "gatsby-plugin-sharp": "^4.19.0",
-    "gatsby-plugin-sitemap": "^5.19.0",
-    "gatsby-source-filesystem": "^4.24.0",
-    "gatsby-transformer-sharp": "^4.19.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-helmet": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.18.6",
+    "@types/react": "^18.0.22",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
+    "@mdx-js/mdx": "^2.0.0-rc.2",
+    "@mdx-js/react": "^2.1.5",
+    "@mdx-js/rollup": "^2.1.5",
+    "remark-frontmatter": "^4.0.1",
+    "remark-mdx-frontmatter": "^2.1.1",
+    "vite": "^3.2.0",
+    "vite-imagetools": "^4.0.11"
   }
 }

@@ -1,0 +1,59 @@
+---
+title: "Rick and morty"
+stack: ["reactjs", "typescript"]
+banner_alt: "Rick and morty"
+demo: "https://rick-and-morty-phi-indol.vercel.app/"
+code: "https://github.com/JoseAPeralta/rick-and-morty"
+---
+
+{/* ! Dont need modificate the banner url */}
+{/* ! Only add the image in this folder with the name banner.png */}
+
+import Banner from "./banner.png?w=90;900;1200&h=660&position=top&webp&quality=20&srcset";
+import Fallback from "./banner.png?w=400";
+import { Box, Text, Flex, Image } from "@chakra-ui/react";
+
+{/* ! Banner use for this project */}
+
+<picture>
+  <Image
+    srcset={Banner}
+    alt={banner_alt}
+    fallbackSrc={Fallback}
+    type="image/webp"
+  />
+</picture>
+
+{/* ! Project description */}
+
+<Box pt="22px"></Box>
+
+Rick and Morty finder is web app to show characters of the famous tv series
+Rick and Morty.
+
+{/* ! Icons list of technologies use in this project */}
+{/* ! Use icons from ../images/icons/youricon.svg */}
+{/* ! Preferible use svg icons */}
+
+<Flex as="section" pt="14px" gap="6" wrap="wrap">
+    <Box w="32px" h="32px">
+    <Image src="../images/icons/javascript.svg" alt="Javascript icon" />
+    </Box>
+
+     <Box w="110px">
+      <Image src="../images/icons/express.svg" alt="express icon" />
+    </Box>
+
+    <Box w="112px" h="32px">
+      <Image src="../images/icons/mongodb.svg" alt="mongoDB icon" />
+    </Box>
+
+    <Box w="40px" h="32px">
+      <Image src="../images/icons/bootstrap.svg" alt="bootstrap icon" />
+    </Box>
+
+    <Box w="60px" h="32px">
+      <Image src="../images/icons/materialize.svg" alt="materialize icon" />
+    </Box>
+
+</Flex>
