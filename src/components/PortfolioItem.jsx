@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Heading, Link, Button, ButtonGroup } from "@chakra-ui/react";
 
 export const PortfolioItem = ({ html, attributes }) => {

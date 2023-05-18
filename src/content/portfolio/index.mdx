@@ -1,24 +1,26 @@
----
-title: "My Portfolio"
-stack: ["reactjs", "chakraui", "mdx"]
-banner_alt: "portfolio project banner"
-demo: "https://jperalta.dev/"
-code: "https://github.com/JoseAPeralta/portfolio"
----
-
-import Banner from "./banner.png?w=90;900;1200&h=660&position=top&webp&quality=20&srcset";
-import Fallback from "./banner.png?w=400";
-import { Box, Text, Flex, Image } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import Image from "next/image";
+export const meta = {
+  title: "My Portfolio",
+  stack: ["reactjs", "chakraui", "mdx"],
+  banner_alt: "portfolio project banner",
+  demo: "https://jperalta.dev/",
+  code: "https://github.com/JoseAPeralta/portfolio",
+};
+import Banner from "./banner.png";
 
 <picture>
   <Image
-    srcset={Banner}
-    alt={banner_alt}
-    fallbackSrc={Fallback}
-    type="image/webp"
+    src={Banner}
+    width={600}
+    height={300}
+    style={{ height: "300px" }}
+    alt={meta.banner_alt}
+    placerholder="blur"
   />
 </picture>
 
+<Flex pt="22px"></Flex>
 My portfolio page to show my personal projects.
 
 Use **MDX** to write projects description and vite as development environment.
@@ -26,12 +28,17 @@ Use **MDX** to write projects description and vite as development environment.
 And use **formspree** service to facilitate contact form implementation.
 
 <Flex as="section" pt="14px" gap="6" wrap="wrap">
-    <Box w="32px" h="32px">
-    <Image src="../images/icons/reactjs.svg" alt="reactJS icon" />
-    </Box>
+    <Image
+    src="/images/icons/reactjs.svg"
+    width={32}
+    height={32}
+    alt="reactJS icon"
+  />
 
-    <Box w="32px" h="32px">
-      <Image src="../images/icons/chakraui.svg" alt="chakraui icon" />
-    </Box>
-
+<Image
+  src="/images/icons/chakraui.svg"
+  width={32}
+  height={32}
+  alt="chakraui icon"
+/>
 </Flex>
