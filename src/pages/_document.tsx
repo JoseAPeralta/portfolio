@@ -11,16 +11,6 @@ export default function Document() {
           name="description"
           content="Web developer, Jose Ariel Peralta personal portfolio"
         />
-        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Patua+One&family=Poppins&display=swap"
-          rel="stylesheet"
-        /> */}
       </Head>
       <body>
         <Main />
