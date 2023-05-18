@@ -2,19 +2,19 @@
   Jose Ariel Peralta Portfolio
 </h1>
 
-This is a personal portfolio develop with react and love.
+This is a personal portfolio develop with react, next and love.
 
 ## Install
 
-    npm install
+    pnpm install
 
 ## To start dev server
 
-    npm run dev
+    pnpm dev
 
 ## Building to production
 
-    npm run build
+    pnpm run build
 
 ## Author
 

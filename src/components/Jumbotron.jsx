@@ -1,8 +1,7 @@
 import React from "react";
 import { AiFillGithub } from "react-icons/ai";
-import { Flex, Box, Heading, Text, Link, Image } from "@chakra-ui/react";
-import JosePeraltaImg from "../images/profile.jpeg?w=1200&h=1600;1400&position=top&webp&quality=80&srcset";
-import Fallback from "../images/profile.jpeg";
+import { Flex, Box, Heading, Text, Link, Image as Cha } from "@chakra-ui/react";
+import Image from "next/image";
 
 export const Jumbotron = () => {
   return (
@@ -45,9 +44,11 @@ export const Jumbotron = () => {
         p={["0", "0", "4"]}
       >
         <Image
-          srcset={JosePeraltaImg}
-          fallbackSrc={Fallback}
-          alt="Jose Peralta photo"
+          src="/images/profile.jpeg"
+          alt="Jose Ariel Peralta - profile photo"
+          width={460}
+          height={460}
+          priority
         />
       </Flex>
     </Flex>

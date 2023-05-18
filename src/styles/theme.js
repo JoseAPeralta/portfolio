@@ -1,4 +1,17 @@
 import { extendTheme } from "@chakra-ui/react";
+import { Patua_One, Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
+const PatuaOne = Patua_One({
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
 
 const theme = {
   colors: {
@@ -24,8 +37,8 @@ const theme = {
     },
   },
   fonts: {
-    heading: `Patua One,Helvetica,Arial,sans-serif`,
-    body: `Poppins,Helvetica,Arial,sans-serif`,
+    heading: `${PatuaOne.style.fontFamily},Helvetica,Arial,sans-serif`,
+    body: `${poppins.style.fontFamily},Helvetica,Arial,sans-serif`,
   },
   styles: {
     global: {

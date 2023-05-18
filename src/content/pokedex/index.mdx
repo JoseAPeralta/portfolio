@@ -1,25 +1,26 @@
----
-title: "Pokedex"
-stack: ["javascript", "materialize"]
-banner_alt: "pokedex banner"
-demo: "https://pokedex-ebon-phi.vercel.app/"
-code: "https://github.com/JoseAPeralta/Pokedex"
----
-
-import Banner from "./banner.png?w=90;900;1200&h=660&position=top&webp&quality=20&srcset";
-import Fallback from "./banner.png?w=400";
-import { Box, Text, Flex, Image } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import Image from "next/image";
+export const meta = {
+  title: "Pokedex",
+  stack: ["javascript", "materialize"],
+  banner_alt: "pokedex banner",
+  demo: "https://pokedex-ebon-phi.vercel.app/",
+  code: "https://github.com/JoseAPeralta/Pokedex",
+};
+import Banner from "./banner.png";
 
 <picture>
   <Image
-    srcset={Banner}
-    alt={banner_alt}
-    fallbackSrc={Fallback}
-    type="image/webp"
+    src={Banner}
+    width={600}
+    height={300}
+    style={{ height: "300px" }}
+    alt={meta.banner_alt}
+    placerholder="blur"
   />
 </picture>
 
-<Box pt="22px"></Box>
+<Flex pt="22px"></Flex>
 
 Pokedex is a web app to search pokemons, show they info and you cand add pokemons to your team
 
@@ -30,12 +31,18 @@ To learn how to get data from **APIS** using **JavaScript**.
 To learn how to implement **Model - View - Controller** on vanilla jss
 
 <Flex as="section" pt="14px" gap="6" wrap="wrap">
-    <Box w="32px" h="32px">
-    <Image src="../images/icons/javascript.svg" alt="Javascript icon" />
-    </Box>
 
-    <Box w="60px" h="32px">
-      <Image src="../images/icons/materialize.svg" alt="materialize icon" />
-    </Box>
+    <Image
+        src="/images/icons/javascript.svg"
+        width={32}
+        height={32}
+        alt="Javascript icon"
+    />
+    <Image
+        src="/images/icons/materialize.svg"
+        width={60}
+        height={32}
+        alt="materialize icon"
+    />
 
 </Flex>
