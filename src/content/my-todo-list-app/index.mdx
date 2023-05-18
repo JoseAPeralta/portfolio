@@ -1,42 +1,50 @@
----
-title: "My Todo List App"
-stack: ["reactjs", "bootstrap"]
-banner_alt: "my todo list app project banner"
-demo: "https://my-todo-list-app-gamma.vercel.app/"
-code: "https://github.com/JoseAPeralta/my-todo-list-app"
----
-
-import Banner from "./banner.png?w=90;900;1200&h=660&position=top&webp&quality=20&srcset";
-import Fallback from "./banner.png?w=400";
-import { Box, Text, Flex, Image } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import Image from "next/image";
+export const meta = {
+  title: "My Todo List App",
+  stack: ["reactjs", "bootstrap"],
+  banner_alt: "my todo list app project banner",
+  demo: "https://my-todo-list-app-gamma.vercel.app/",
+  code: "https://github.com/JoseAPeralta/my-todo-list-app",
+};
+import Banner from "./banner.png";
 
 <picture>
   <Image
-    srcset={Banner}
-    alt={banner_alt}
-    fallbackSrc={Fallback}
-    type="image/webp"
+    src={Banner}
+    width={600}
+    height={300}
+    style={{ height: "300px" }}
+    alt={meta.banner_alt}
+    placerholder="blur"
   />
 </picture>
 
-<Box pt="22px"></Box>
+<Flex pt="22px"></Flex>
 
 A todo list app in which you could indicate a name, level of urgency, deadline, among other things.
 
 Contains a **custom** component **library** form, to manage its state, facilitate theming and their reuse, which uses
 Bootstrapfor styling
 
-<Flex as="section" pt="14px" gap="6" wrap="wrap" >
-    <Box >
-      <Image  src="../images/icons/javascript.svg" alt="Javascript icon" with="32px" h="32px"/>
-    </Box>
-
-    <Box w="32px" h="32px">
-      <Image src="../images/icons/reactjs.svg" alt="reactJS icon" />
-    </Box>
-
-    <Box w="40px" h="32px">
-      <Image src="../images/icons/bootstrap.svg" alt="bootstrap icon" />
-    </Box>
+<Flex as="section" pt="14px" gap="6" wrap="wrap">
+  <Image
+    src="/images/icons/javascript.svg"
+    width={32}
+    height={32}
+    alt="Javascript icon"
+  />
+  <Image
+    src="/images/icons/reactjs.svg"
+    width={32}
+    height={32}
+    alt="reactJS icon"
+  />
+  <Image
+    src="/images/icons/bootstrap.svg"
+    width={40}
+    height={32}
+    alt="bootstrap icon"
+  />
 
 </Flex>
